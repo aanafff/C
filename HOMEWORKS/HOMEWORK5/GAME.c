@@ -12,19 +12,22 @@
 #include <stdlib.h>
 #include "PT2.h"
 
-char hash[CONTL][CONTL]; //showed array
-int nums[CONTL][CONTL]; //mines and numbers array
+char hash[CONTL][CONTL];
+int nums[CONTL][CONTL]; 
 
-int open() {
+int open() 
+{
 
     int wait = 1, did, save;
     int use = 1, use2 = 1;
     int c, pos, block, a, b;
     
-    while(wait) { //if the imput was invalid it reapeats
+    while(wait)
+    { 
         pos = block = did = save = 0, use = use2 = 1;
-        printf("\nPlease, Enter the row and column: ");
-        while((c = getchar()) != EOF && c != '\n' && wait) { //takes imput
+        printf("\nENTER ROW AND COLUMN");
+        while((c = getchar()) != EOF && c != '\n' && wait) 
+        { 
             if(c == '0' && save)
                 pos += 90, save = 0;
             else if(c == '1')
@@ -35,27 +38,29 @@ int open() {
                 pos += (toupper(c) - 'A'), use2 = 0, save = 0;
             else if(tolower(c) == 'm')
                 block = 1;
-            else if(c != ' ') {
-                printf("Invalid location\n");
+            else if(c != ' ') 
+            {
+                printf("NOT VALID\n");
                 did = 1;
             }
         }
         a = pos/10, b = pos%10;
         if(hash[a][b] == '-' && !block)
-            did = 1, printf("Space Blocked\n");
+            did = 1, printf("BLOCKED\n");
         if(hash[a][b] != '#' && hash[a][b] != '-')
-            did = 1, printf("Already opened\n");
+            did = 1, printf("OPENED\n");
         if(!did)
             wait = 0;
     }
     printf("\n");
 
-    if(nums[a][b] == -1 && hash[a][b] != '-' && !block) {
+    if(nums[a][b] == -1 && hash[a][b] != '-' && !block) 
+    {
         kaboom();
         return LOST;
     }
     
-    if(hash[a][b] != '-') //if is not blocked
+    if(hash[a][b] != '-') 
         hash[a][b] = nums[a][b] + '0';
     
     if(hash[a][b] == '0')
@@ -66,11 +71,12 @@ int open() {
     else if (block)
         hash[a][b] = '-';
     
-    forloop(use2, CONTL*CONTL) //check if you won
+    forloop(use2, CONTL*CONTL)
         if(hash[use2/10][use2%10] != '#' || (hash[use2/10][use2%10] == '#' && nums[use2/10][use2%10] == -1))
             use++;
-    if(use == 100){
-        printf("\nCongratulations! You won");
+    if(use == 100)
+    {
+        printf("\nYOU WON");
         return WON;
     }
     if(nums[a][b] == 0)
@@ -79,7 +85,8 @@ int open() {
     return OK;
 }
 
-void kaboom() {
+void kaboom() 
+{
 
     int i;
     forloop(i, CONTL*CONTL)
@@ -88,7 +95,8 @@ void kaboom() {
             
 }
 
-void bombs() {
+void bombs() 
+{
 
     int te, i, limit = CONTL*CONTL;
     srand(time(NULL));
@@ -103,7 +111,8 @@ void bombs() {
         
 }
 
-void neighbours(int imp) {
+void neighbours(int imp) 
+{
     
     int a, b;
     int esp = 0;
@@ -131,7 +140,8 @@ void neighbours(int imp) {
         
 }
 
-void empty(int a, int b) { //recursive function
+void empty(int a, int b) 
+{ 
     
     static char x[CONTL][CONTL];
     x[a][b] = 1;
