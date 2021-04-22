@@ -20,9 +20,9 @@ int main()
     forloop(i, CONTL*CONTL)
         hash[i/10][i%10] = '#';
    
-    printf("\tHow to play:\nEnter the number and row of the coloumn to open it\n");
-    printf("Example: \"c3\" or \"3c\"\nTo set a flag enter the location + \"m\"\n");
-    printf("Example: \"8dm\" \"md8\" \"8md\"\nAnd to remove it do it again\n\n");
+    printf("\tINSTRUCTIONS:\nENTER A ROW AND COLUMN\n");
+    printf("i.e: \"4B\" or \"B4\"\nENTER A LOCATION + \"m\"\n");
+    printf("i.e: \"8CM\" \"MC8\" \"8MC\"\nREPEAT TO REMOVE\n\n");
     do { //prints board
         for(lett = 'A', i = 0; i != CONTL; i++, lett++)
         (void)(printf("\t %c", lett)), flag = 1;
@@ -47,7 +47,7 @@ int main()
             printf("_______|");
         printf("\n");
         if(c == LOST) {
-            printf("\nYou lost!\n");
+            printf("\nYOU LOST\n");
             break;
         }
     } while((c = open()) != EOF && c != WON);
