@@ -6,7 +6,7 @@
 //
 
 #define HOMEWORK7_h
-#define MAX 30
+#define MAX 30                              //ATTEMPT//
 #define USUARIOS    50 
 int* registrados = 0;
 int** matrix;
