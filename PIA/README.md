@@ -14,3 +14,8 @@ https://youtu.be/-r1nsBHl0B8
 Because it is a game that needs much time to complete it, the time is not enough to play the entire game.
 
 As an error we can find that at the moment in which one tile eats another, these positions switch, making it not appear that the tile was eaten but moving the other to the corresponding place. It is a minor error that I could not fix.
+
+CONSULT
+- c-refcard
+- C programming language book
+- Kernighan
