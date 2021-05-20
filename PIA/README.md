@@ -9,6 +9,18 @@ The purpose of the game is to checkmate the opponent's king. This happens when t
 ## ▶️ YOUTUBE VIDEO LINK:
 https://youtu.be/-r1nsBHl0B8
 
+## AUTOEVALUATION
+-1: complejidad 2 (esta bien de complejidad basado en lo que hemos visto en el semestre) 
+
+-2: funcionalidad 2 (solo falla una cosa, al comerte otra ficha estas intercambian lugar) 
+
+-3: código 3 (quedo bien) 
+
+-4: almacenaje 2 (no es tan limitado) 
+
+-5: documentación 3 (la ortografía esta bien y el video no tan editado pero decente) 
+
+### CF 12 de 15
 
 ##### ‼️ MISTAKE
 Because it is a game that needs much time to complete it, the time is not enough to play the entire game.
