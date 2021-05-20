@@ -29,5 +29,5 @@ As an error we can find that at the moment in which one tile eats another, these
 
 CONSULT
 - c-refcard
-- C programming language book
-- Kernighan
+- W., K. B., & Dennis, R. (1988). C Programming Language (English Edition) (2.a ed.). Pearson. http://cslabcms.nju.edu.cn/problem_solving/images/c/cc/The_C_Programming_Language_%282nd_Edition_Ritchie_Kernighan%29.pdf
+- Roberts, D. (s. f.). Clear Screen and More. Frederick and Donna Roberts, MathBits.com. Recuperado 18 de mayo de 2021, de https://mathbits.com/MathBits/CompSci/Screen/clear.htm
