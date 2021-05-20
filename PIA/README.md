@@ -16,7 +16,7 @@ https://youtu.be/-r1nsBHl0B8
 
 -3: código 3 (quedo bien) 
 
--4: almacenaje 2 (no es tan limitado) 
+-4: almacenaje 2 (no es tan limitado por el ingreso de datos de cada movimiento) 
 
 -5: documentación 3 (la ortografía esta bien y el video no tan editado pero decente) 
 
